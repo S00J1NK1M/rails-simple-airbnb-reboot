@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center my-3">
+    <h1>All flats (<%= @flats.length %>)</h1>
+    <%= link_to 'Add a flat', new_flat_path, class: "btn btn-outline-primary" %>
+  </div>
+
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card">
+        <div class="card-info">
+          <h5><%= flat.name %></h5>
+          <p>📍 <%= flat.address %></p>
+          <p>👥 up to <strong><%= flat.number_of_guests %></strong> guests</p>
+          <p>💶 <strong><%= flat.price_per_night %>EUR</strong> per night</p>
+        </div>
+        <div class="card-link">
+        <%= link_to 'More info', flat_path(flat), style: "text-decoration: none; font-weight: bold;" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

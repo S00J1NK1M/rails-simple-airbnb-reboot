@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+}
+
+
+.card-info {
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.card-link {
+  padding: 20px;
+}
+
+#flat {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
